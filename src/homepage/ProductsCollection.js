@@ -3,14 +3,19 @@ import ProductsList from "./Components/ProductsList";
 function ProductsCollection() {
     return (
         <div className="pcollection">
-            <ProductsList dtarray = {dataArray1}/>
+            {dataArray.map((arr)=>{
+                return (
+                    <ProductsList dtarray = {arr}/>
+                )
+            })}
+            {/* <ProductsList dtarray = {dataArray1}/>
             <ProductsList dtarray = {dataArray2}/>
             <ProductsList dtarray = {dataArray3}/>
-            <ProductsList dtarray = {dataArray4}/>
+            <ProductsList dtarray = {dataArray4}/> */}
         </div>
     )
 }
-let dataArray1 = {
+let dataArray = [{
     list1: {
         name: ['Cushion cover, bedsheets & more', 'Home decoration', 'Home Storage', 'Lighting Solutions'],
         images: ['https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/HF_-_PCQC_-_Resized._SY232_CB595940621_.jpg', 'https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/Home_Decor_-_PCQC_-_Resized._SY232_CB595940621_.jpg', 'https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/HS_-_PCQC_-_Resized._SY232_CB595940621_.jpg', 'https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/BAU2023/BTFGW/IL_-_PCQC_-_Resized._SY232_CB595940621_.jpg'],
@@ -32,8 +37,8 @@ let dataArray1 = {
         linkurl: 'https://www.amazon.in/l/25981077031/?_encoding=UTF8&pd_rd_w=tcgIF&content-id=amzn1.sym.c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_p=c4e6abc4-6a33-472a-ba5a-c679167cd85f&pf_rd_r=8KHD8SB8G2TM4XYA38ZG&pd_rd_wg=nYevu&pd_rd_r=4b1031ba-d344-47bd-a7fd-fd318f5722ef&ref_=pd_gw_unk',
         heading: 'Essentials for Expecting Mothers',
     }
-};
-let dataArray2 = {
+},
+{
     list1: {
         name: ['name17', 'name18', 'name19', 'name20'],
         images: ['img17', 'img18', 'img19', 'img20'],
@@ -55,9 +60,9 @@ let dataArray2 = {
         linkurl: 'https://example7.com',
         heading: 'Heading 7',
     }
-};
+},
 
-let dataArray3 = {
+{
     list1: {
         name: ['name33', 'name34', 'name35', 'name36'],
         images: ['img33', 'img34', 'img35', 'img36'],
@@ -79,9 +84,8 @@ let dataArray3 = {
         linkurl: 'https://example11.com',
         heading: 'Heading 11',
     }
-};
-
-let dataArray4 = {
+},
+{
     list1: {
         name: ['name49', 'name50', 'name51', 'name52'],
         images: ['img49', 'img50', 'img51', 'img52'],
@@ -103,5 +107,5 @@ let dataArray4 = {
         linkurl: 'https://example15.com',
         heading: 'Heading 15',
     }
-};
+}];
 export default ProductsCollection;
